@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 15-17</title>
+</head>
+<body>
+    <script>
+    var cources=[];
+    var cource1= prompt("please enter cource1 name");
+    var cource2= prompt("please enter cource2 name");
+    var cource3= prompt("please enter cource3 name");
+    var cource4= prompt("please enter cource4 name");
+    var cource5= prompt("please enter cource5 name");
+    cources.push(cource1);
+    cources.push(cource2);
+    cources.push(cource3);
+    cources.push(cource4);
+    cources.push(cource5);
+    alert(cources);
+    alert(cources[0]);
+    alert(cources[1]);
+    alert(cources[2]);
+    alert(cources[3]);
+    alert(cources[4]);
+
+    cource1 = prompt("First Course",cources[0]);
+        cource2 = prompt("Second Course",cources[1]);
+        cource3 = prompt("Third Course",cources[2]);
+        cource4 = prompt("Forth Course",cources[3]);
+        cource5 = prompt("Fifth Course",cources[4]);
+
+        cources.splice(0,cources.length,cource1,cource2,cource3,cource4,cource5);
+        alert(cources);
+        
+    </script>
+</body>
+</html>

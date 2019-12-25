@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 31 To 34</title>
+</head>
+<body>
+    <script>
+    var name=prompt("Please Enter your name ","Saqib ali");
+var Dob=prompt("Please Enter your Date ",25);
+var Dob_month=prompt("Please Enter your Month ", 02);
+var Dob_year=prompt("Please Enter your Year ",1998);
+
+var greetings;
+var time = new Date().getHours();
+if (time < 10){
+    greetings = "good Morning";
+}
+else if (time < 15){
+    greetings = "Good AfterNoon";
+}
+else if(time <19){
+    greetings = "Good Evening";
+}
+else{
+    greetings = "Good Night";
+}
+
+console.log("Hello "+ name +" "+ greetings);
+
+var Dob_Timeformat=new Date(Dob_month + " " + Dob + "," + Dob_year );
+console.log(Dob_Timeformat);  
+
+var currentDate= new Date();
+var diff= currentDate.getTime() - Dob_Timeformat.getTime();
+var sec=diff/1000;
+var minutes= diff/(1000 * 60);
+var hours = diff /(1000 * 60 * 60);
+var days=diff /(1000 * 60 * 60 * 24);
+var years=diff /(1000 * 60 * 60 * 24 * 365);
+var month=currentDate.getMonth() - Dob_Timeformat.getMonth();
+console.log("You're " +Math.round(years) + " "+"years " +Math.round (month) +" " + "months "+Math.round (days) + " " +"days "+Math.round (hours) + " "+ "hours "+ 
+Math.round(minutes) +" " + "minutes "+Math.round (sec) +" "+ "second old");
+
+var Dobnew=prompt("Please Enter your next Birthday Date ",25);
+var Dob_monthnew=prompt("Please Enter your next Birthday Month ", 02);
+var Dob_yearnew=prompt("Please Enter next year ",2020);
+var today=new Date();
+var Dob_Timeformatnew=new Date(Dob_monthnew + " " + Dobnew + "," + Dob_yearnew );
+var diffnew=Dob_Timeformatnew.getTime() - today.getTime();
+
+var secnew=diffnew/1000;
+var minutesnew= diffnew/(1000 * 60);
+var hoursnew = diffnew /(1000 * 60 * 60);
+var daysnew=diffnew /(1000 * 60 * 60 * 24);
+var yearsnew=diffnew /(1000 * 60 * 60 * 24 * 365);
+var monthnew=Dob_Timeformatnew.getMonth() - today.getMonth();
+console.log("How much Time left in your next Birthday? \n ",Math.round(daysnew)+" " +"days" + " " + 
++Math.round(hoursnew) + " "+ "hours" +" " +Math.round (minutesnew) +" "+ "minutes " +Math.round (secnew) +" "+ "seconds left ");
+
+if(diffnew=== 0){
+    console.log("Happy Birthday "+ name);
+}
+
+    </script>
+    
+</body>
+</html>

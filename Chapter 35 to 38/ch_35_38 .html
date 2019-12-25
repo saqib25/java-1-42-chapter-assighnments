@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 35 to 38</title>
+</head>
+<body>
+  <script>
+var input=prompt("What's Your name?","saqib ali");
+function capitalizeValue(input){
+ var splitInput=input.split(" ");
+ var spaceEnd="";
+ var space=" ";
+ for (var i=0; i<splitInput.length; i++){
+ spaceEnd+= splitInput[i].charAt(0).toUpperCase() + splitInput[i].slice(1).toLowerCase() + space;
+
+ }
+ return spaceEnd; 
+}
+var result=capitalizeValue(input);
+console.log(result);
+  </script>  
+</body>
+</html>
